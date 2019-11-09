@@ -1,6 +1,12 @@
 # Routh
----
+
 O software desse repositório verifica se um sistema **G(s)** dado por uma função de transferência, é estável, assim como verifica algumas de suas características. Para tal, é utilizado o critério de estabilidade de Routh[1].
+
+## Demonstração
+
+![Demonstração do funcionamento](demonstracao.gif)
+
+<br>
 
 ### Para executar
 Execute os comandos abaixo para:
@@ -50,8 +56,8 @@ o software será executado no endereço ```localhost:4200```
 
 ### Autores:
 
-* André M. S. Neves;
-* Leonam Teixeira de Vasconcelos.
+* [André M. S. Neves](https://github.com/AndreNeves97);
+* [Leonam Teixeira de Vasconcelos](https://github.com/leonamtv).
 
 ### Referência
 

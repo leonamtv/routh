@@ -1,0 +1,85 @@
+.main-container {
+    padding: 5%;
+}
+
+
+
+.input {
+    width: 90%;
+    padding-bottom: 5%;
+}
+
+.titulo {
+    font-weight: 100;
+}
+
+.texto {
+    font-weight: 100;
+}
+
+.equation {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.gen-equation {
+    font-size: 25px;
+}
+
+
+.interation-container {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.status-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .message {
+        font-size: 25px;
+        font-weight: 400;
+        padding-bottom: 10px;
+    }
+
+    .message-content {
+        padding-top: 2px;
+        font-size: 17px;
+        font-weight: 200;
+    }
+
+    .grid {
+        padding-top: 12px;
+
+        .column-table-data {
+            padding: 0 10px;
+        }
+    }
+
+
+}
+
+.input-container {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media (max-width: 650px) {
+    .interation-container {
+        flex-direction: column;
+    }
+
+    .status-container {
+        width: 100%;
+    }
+    
+    .input-container {
+        width: 100%;
+    }
+}
