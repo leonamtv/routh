@@ -83,23 +83,6 @@ function result = routh (den, config=5)
     
   endfor
   
-%  printf('Nº de negativos: %d\n', negative_count);
-%  printf('Nº de zeros....: %d\n\n', zero_count);
-%  
-%  printf('Nº de polos no lado\ndireito do eixo im.: %d\n\n', signal_change);
-%  
-%  if (negative_count > 0)
-%    printf('Sistema instável.\n');
-%  else  
-%    if ( zero_count > 0)
-%      printf('Sistema marginalmente estável.\n');
-%    else
-%      printf('Sistema estável.\n');
-%    endif
-%  endif 
-
-
-
   if (negative_count > 0)
     # Sistema instável
     estabilidade = 0;
