@@ -5,12 +5,7 @@ const router  = express.Router();
 const regex_check_condition = /^\[((([-+]{0,1}[0-9])+)|([-+]{0,1}[0-9]\.[0-9]+)|( ))*\]$/;
 const regex_check_brackets  = /^\[.+\]$/;
 
-
-
-
-
 function filtrar_denominador ( denominador ) {
-
     
     // Verifica se o denominador passado está entre 
     // '[ ]', caso não esteja, ou tenha apenas um
@@ -36,8 +31,6 @@ router.post('/routh', (req, res) => {
 
     const { data } = req.body;
 
-    console.log(data)
-
     let { denominador } = data;
 
     denominador = filtrar_denominador(denominador);
@@ -61,8 +54,6 @@ router.post('/routh', (req, res) => {
 router.get('/routh-est', (req, res) => {
 
     const { data } = req.body;
-
-    console.log(data)
 
     let { denominador } = data;
 
