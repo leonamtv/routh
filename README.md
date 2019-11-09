@@ -1,6 +1,6 @@
 # Routh
 ---
-O software desse repositório verifica se um sistema **G(s)** dado por uma função de transferência, é estável, assim como verifica algumas de suas características. Para tal, é utilizado o critério de estabilidade de Routh.
+O software desse repositório verifica se um sistema **G(s)** dado por uma função de transferência, é estável, assim como verifica algumas de suas características. Para tal, é utilizado o critério de estabilidade de Routh[1].
 
 ### Para executar
 Execute os comandos abaixo para:
@@ -52,3 +52,7 @@ o software será executado no endereço ```localhost:4200```
 
 * André M. S. Neves;
 * Leonam Teixeira de Vasconcelos.
+
+### Referência
+
+* [1] Ogata, Katsuhiko. Engenharia de controle moderno / Katsuhiko Ogata ; tradutora Heloísa. Coimbra de Souza ; revisor técnico Eduardo Aoun Tannuri. -- 5. ed. -- São Paulo : Pearson Prentice Hall, 2010.
