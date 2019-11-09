@@ -1,0 +1,81 @@
+<div class='main-container'>
+    <form [formGroup]="form">
+        <div class="title">
+            <h2 class='titulo'>Critério de routh</h2>
+        </div>
+
+        <p class='texto'>Exemplo de entrada: <i>Se temos que</i></p>
+
+        <ng-katex class='gen-equation' [equation]="equationExemplo"></ng-katex><br>
+        
+        <p class='texto'><i>Informe:</i></p>
+
+        <ul>
+            <li>
+                <p class='texto'><i>Numerador: </i></p><ng-katex [equation]="numExemplo"></ng-katex><br>
+            </li>
+            <li>
+                <p class='texto'><i>Denominador: </i></p><ng-katex [equation]="denExemplo"></ng-katex><br>
+            </li>
+        </ul>
+
+        <div class='equation'>
+            <p class='texto'><i>Equação gerada:</i></p>
+            <ng-katex class='gen-equation' [equation]="equacao$ | async"></ng-katex><br>
+        </div>
+
+        <div class="interation-container">
+            <div class="input-container">
+    
+                <mat-form-field class='input' >
+                    <input matInput formControlName="num" placeholder="Numerador" autocomplete="off">
+                    <mat-hint align="end">Digite os coeficientes separados por espaço</mat-hint>
+                    <mat-error>Digite os coeficientes do numerador de forma válida</mat-error>
+                </mat-form-field>
+        
+                <br>
+        
+                <mat-form-field class='input' >
+                    <input matInput formControlName="den" placeholder="Denominador" autocomplete="off">
+                    <mat-hint align="end">Digite os coeficientes separados por espaço</mat-hint>
+                    <mat-error>Digite os coeficientes do denominador de forma válida</mat-error>
+                </mat-form-field>
+            </div>
+
+
+            <div class="status-container" *ngIf="status$ | async as status">
+                <mat-spinner *ngIf="status.status === 'changed'"></mat-spinner>
+
+                <div class="message" *ngIf="status.status === 'empty'">
+                    Digite a equação
+                </div>
+
+                <div class="message" *ngIf="status.status === 'error'">
+                    Erro ocorrido
+                </div>
+    
+    
+                <div *ngIf="status.status === 'done'">
+                    <div class="message" *ngIf="status.data.estabilidade == 2">Sistema estável</div>
+                    <div class="message" *ngIf="status.data.estabilidade == 1">Sistema marginalmente estável</div>
+                    <div class="message" *ngIf="status.data.estabilidade == 0">Sistema instável</div>
+
+
+                    <div class="message-content">Pólos em negativos reais: {{ status.data.negp }}</div>
+                    <div class="message-content">Pólos em positivos reais: {{ status.data.posp }}</div>
+                    <div class="message-content">Pólos no zero real: {{ status.data.zerop }}</div>
+
+                    <table class="grid">
+                        <tr *ngFor="let linha of status.data.grid; let i = index">
+                            <td class="first-column-table-data">
+                                <ng-katex [equation]=" 's^' + (status.data.grid.length - i - 1) "></ng-katex>
+                            </td>
+                            
+                            <td class="column-table-data" *ngFor="let celula of linha">{{ celula }}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
