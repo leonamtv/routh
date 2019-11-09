@@ -55,4 +55,4 @@ o software será executado no endereço ```localhost:4200```
 
 ### Referência
 
-* [1] Ogata, Katsuhiko. Engenharia de controle moderno / Katsuhiko Ogata ; tradutora Heloísa. Coimbra de Souza ; revisor técnico Eduardo Aoun Tannuri. -- 5. ed. -- São Paulo : Pearson Prentice Hall, 2010.
+* [1] Ogata, Katsuhiko. Engenharia de controle moderno / Katsuhiko Ogata; tradutora Heloísa Coimbra de Souza; revisor técnico Eduardo Aoun Tannuri. -- 5. ed. -- São Paulo : Pearson Prentice Hall, 2010.
