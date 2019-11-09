@@ -1,0 +1,19 @@
+FROM node:10
+
+RUN mkdir -p ../container/node_modules && chown -R root:root ../container
+
+WORKDIR ../container
+
+COPY package*.json ./
+
+RUN npm install
+
+COPY . .
+
+COPY --chown=root:root . .
+
+USER root
+
+EXPOSE 3000
+
+CMD [ "node", "index.js" ]
