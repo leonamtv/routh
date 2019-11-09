@@ -15,18 +15,18 @@ $ yarn install
 ou caso não utilize o ```yarn```, substitua o segundo comando por:
 
 ```bash
-npm install
+$ npm install
 ```
 * Executar o backend:
 
 ```bash
-yarn start
+$ yarn start
 ```
 
 ou
 
 ```bash
-npm run start
+$ npm run start
 ```
 * Instalar as dependências do frontend:
 
@@ -38,12 +38,12 @@ $ yarn install
 ou caso não utilize o ```yarn```, substitua o segundo comando por:
 
 ```bash
-npm install
+$ npm install
 ```
 * Executar o frontend:
 
 ```bash
-ng serve
+$ ng serve
 ```
 
 o software será executado no endereço ```localhost:4200```
