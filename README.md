@@ -9,6 +9,9 @@ O software desse repositório verifica se um sistema **G(s)** dado por uma funç
 <br>
 
 ### Para executar
+
+**Observação:** É necessário uma instalação do [Octave](https://www.gnu.org/software/octave/) em um ambiente GNU/Linux para que o sistema funcione corretamente, pois toda a arquitetura foi elaborada sob tais requisitos.
+
 Execute os comandos abaixo para:
 
 * Instalar as dependências do backend:
